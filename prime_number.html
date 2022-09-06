@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var a = parseInt(prompt());
+            var divisors = new Array();
+            if(a>3){
+                for (i=2;i<a;i++){
+                    if(a%i==0){
+                        divisors.push(i);
+                    }
+                 }
+             }
+                if(divisors.length>0){
+                    document.write(a +" is not a prime number");
+                }
+                else if(a<2){ document.write(a +" is not a prime number");
+            }
+            else{
+                document.write(a+ " is a prime number.");
+            }
+        </script>
+    </body>
+</html>

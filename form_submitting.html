@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!-- Form Control -->
+      <fieldset>
+        <legend>Trainee Form</legend>
+        <form onsubmit="getFormValues(); return false;" id="my_form" name="my_form">
+            Name
+            <input type="text" autofocus placeholder="Write name.." name="name"><br>
+           Email
+            <input type="email" id="email">
+            <br>
+            Gender
+            <input type="radio" name="gender" value="Male"> Male
+            <input type="radio" name="gender" checked value="Female"> Female
+            <br>
+           
+            <label>Country</label>
+            <select name="country">
+                <option value="BD">BD</option>
+                <option value="UK">UK</option>
+                <option value="USA">USA</option>
+                <option value="CA">CA</option>
+            </select>
+            <br>
+            <label>Address</label>
+            <textarea rows="3" cols="12" name="address"></textarea>
+            <br>
+            <label>Education</label>
+            <input type="checkbox" value="SSC" name="course"> SSC
+            <input type="checkbox" value="HSC" name="course"> HSC
+            <input type="checkbox" value="BSC" name="course"> BSC
+            <input type="checkbox" value="MSC" name="course"> MSC
+            <br>
+            <input type="submit">
+            <input type="reset">
+        </form>
+      </fieldset>
+      <textarea name="box" id="box" cols="30" rows="8"></textarea>
+      <script>
+        var box = "";
+        function getFormValues(){
+          box = "";
+          var form = document.my_form;
+          box += "Name : " + form.name.value + "\n"; 
+          box += "Email : " + form.email.value + "\n";
+          box += "Gender : " + form.gender.value + "\n";
+          box += "Country : " + form.country.value + "\n";
+          box += "Address : " + form.address.value + "\n";
+          box += "Course : ";
+          for (let i = 0; i < form.course.length; i++) {
+            if(form.course[i].checked == true){
+              box += form.course[i].value + " ";
+            }
+          }
+          console.log(box);
+          document.getElementById("box").innerHTML = box;
+          var a = window.open();
+          a.document.write('<center><textarea name="box" id="box" cols="30" rows="8">'+box+'</textarea></center>');
+          /*var form = document.my_form;
+          var name = form.name.value;
+          var email = form.email.value;
+          var gender = form.gender.value;
+          var country = form.country.value;
+          var address = form.address.value;
+          var course = form.course;
+          for (let i = 0; i < course.length; i++) {
+            if(course[i].checked == true){
+              console.log(course[i].value);
+            }
+          }
+        */
+        }
+      </script>
+  </body>
+</html>
