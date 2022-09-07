@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Window</h2>
+
+<p id="demo"></p>
+
+<script>
+    //window object
+document.getElementById("demo").innerHTML =
+"Browser inner window width: " + window.innerWidth + "px<br>" +
+"Browser inner window height: " + window.innerHeight + "px<br><br><br><br><br>"+
+//window.screen object
+"Screen width is " + window.screen.width+"<br>"+
+"Screen Height is " +window.screen.height+"<br>"+
+"Screen availwidth is " +window.screen.availWidth+"<br>"+
+"Screen availheight is " +window.screen.availHeight+"<br>"+
+"Screen colordepth is " +window.screen.colorDepth+"<br>"+
+"Screen pixelDepth is " +window.screen.pixelDepth+"<br><br><br><br><br>"+ 
+//window.location object
+"The full URL of this page is:<br>" + window.location.href+"<br><br>"+
+"The hostname is:<br>"+window.location.hostname+"<br><br>"+
+"The the path and filename of the current page is:<br>"+window.location.pathname+"<br><br>"+
+"The the web protocol used (http: or https:) is:<br>"+window.location.protocol+"<br><br>"+
+"  loads a new document :<br>"+window.location.hostname;
+
+
+
+
+</script>
+
+</body>
+</html>
